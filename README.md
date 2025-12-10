@@ -10,10 +10,10 @@ Rate limiting for ORPC using Cloudflare Durable Objects.
   "bindings": [{ "name": "RATE_LIMITER_DO", "class_name": "RateLimiterDO" }]
 },
 "migrations": [
-{
-  "tag": "new-rate-limiter-do",
-  "new_classes": ["RateLimiterDO"]
-}
+  {
+    "tag": "new-rate-limiter-do",
+    "new_classes": ["RateLimiterDO"]
+  }
 ]
 ```
 
