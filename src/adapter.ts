@@ -1,8 +1,6 @@
 import type { Ratelimiter } from "@orpc/experimental-ratelimit";
 import type { RateLimiterDurableObject } from "./durable-object";
 
-
-
 type RatelimitOptions = {
   /**
    * The prefix to use for Redis keys.
@@ -29,7 +27,7 @@ export class CloudflareDurableRateLimiter implements Ratelimiter {
   private readonly window: number;
 
   constructor(
-    namespace: DurableObjectNamespace<any>,
+    namespace: DurableObjectNamespace<RateLimiterDurableObject>,
     options: RatelimitOptions
   ) {
     this.namespace = namespace;

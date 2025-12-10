@@ -16,13 +16,9 @@ jobs:
 
       - run: bun i
 
-      # - run: bun run lint
+      - run: bun run lint
 
-      # - run: bun run type:check
-
-      # - name: Ensure apps/content builds successfully
-      #   working-directory: apps/content
-      #   run: bun run build
+      - run: bun run type:check
 
   # test:
   #   runs-on: ubuntu-latest
