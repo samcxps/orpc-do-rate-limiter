@@ -8,10 +8,18 @@
   "keywords": [
     "orpc"
   ],
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.mts",
+        "import": "./dist/index.mjs",
+        "default": "./dist/index.mjs"
+      }
+    }
+  },
   "exports": {
     ".": "./src/index.ts"
   },
-
   "scripts": {
     "build": "unbuild",
     "lint": "biome check .",
