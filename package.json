@@ -11,11 +11,14 @@
   "exports": {
     ".": "./src/index.ts"
   },
+
   "scripts": {
     "build": "unbuild",
     "lint": "biome check .",
     "format": "biome format --write .",
-    "type:check": "tsc --noEmit"
+    "type:check": "tsc --noEmit",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "files": [
     "dist"
@@ -25,8 +28,10 @@
     "@cloudflare/workers-types": "^4.20251210.0",
     "@types/bun": "latest",
     "@types/node": "^24.10.2",
+    "@vitest/coverage-v8": "4.0.15",
     "ultracite": "6.3.10",
-    "unbuild": "^3.6.1"
+    "unbuild": "^3.6.1",
+    "vitest": "^4.0.15"
   },
   "peerDependencies": {
     "typescript": "^5"

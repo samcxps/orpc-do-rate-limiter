@@ -20,13 +20,13 @@ jobs:
 
       - run: bun run type:check
 
-  # test:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v4
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-  #     - uses: oven-sh/setup-bun@v2
+      - uses: oven-sh/setup-bun@v2
 
-  #     - run: bun i
+      - run: bun i
 
-  #     - run: bun run test:coverage
+      - run: bun run test:coverage
