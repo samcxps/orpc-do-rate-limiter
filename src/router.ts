@@ -25,6 +25,7 @@ export const router = {
     .handler(async () => ({
       message: "Hello, rate limited world!",
     })),
+
   directUsageLimited: pub
     .route({
       method: "GET",
