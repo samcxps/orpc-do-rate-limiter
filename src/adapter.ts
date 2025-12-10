@@ -37,6 +37,10 @@ export class CloudflareDurableRateLimiter implements Ratelimiter {
   }
 
   async limit(key: string) {
+    if (!key || key.trim() === "") {
+      throw new TypeError("Key cannot be empty");
+    }
+
     const prefixedKey = `${this.prefix}${key}`;
 
     const stub = this.namespace.getByName(prefixedKey);

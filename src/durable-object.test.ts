@@ -7,21 +7,6 @@ vi.mock("cloudflare:workers", () => ({
   DurableObject: class {},
 }));
 
-type DurableObjectStorage = {
-  get: <T>(key: string) => Promise<T | undefined>;
-  put: (key: string, value: unknown) => Promise<void>;
-  delete: (keys: string[]) => Promise<void>;
-  list: <T>() => Promise<Map<string, T>>;
-  getAlarm: () => Promise<number | null>;
-  setAlarm: (scheduledTime: number) => Promise<void>;
-  deleteAlarm: () => Promise<void>;
-};
-
-type DurableObjectState = {
-  storage: DurableObjectStorage;
-  blockConcurrencyWhile: (fn: () => Promise<void>) => Promise<void>;
-};
-
 describe("RateLimiterDurableObject", () => {
   let mockStorage: DurableObjectStorage;
   let mockCtx: DurableObjectState;
