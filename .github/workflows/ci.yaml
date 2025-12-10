@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+
+      - run: bun i
+
+      # - run: bun run lint
+
+      # - run: bun run type:check
+
+      # - name: Ensure apps/content builds successfully
+      #   working-directory: apps/content
+      #   run: bun run build
+
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+
+  #     - uses: oven-sh/setup-bun@v2
+
+  #     - run: bun i
+
+  #     - run: bun run test:coverage

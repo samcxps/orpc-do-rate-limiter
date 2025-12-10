@@ -5,5 +5,13 @@
     "parser": {
       "allowComments": true
     }
+  },
+
+  "linter": {
+    "rules": {
+      "performance": {
+        "noBarrelFile": "off"
+      }
+    }
   }
 }
