@@ -1,5 +1,5 @@
 import { os } from "@orpc/server";
-import type { CloudflareDurableRateLimiter } from "./do-rate-limiter/adapter";
+import type { CloudflareDurableRateLimiter } from "../../src/adapter";
 
 type ORPCContext = {
   env: Env;

@@ -1,6 +1,7 @@
-/** biome-ignore-all lint/suspicious/noExplicitAny: <explanation> */
-
 import type { Ratelimiter } from "@orpc/experimental-ratelimit";
+import type { RateLimiterDurableObject } from "./durable-object";
+
+
 
 type RatelimitOptions = {
   /**
@@ -22,7 +23,7 @@ type RatelimitOptions = {
 };
 
 export class CloudflareDurableRateLimiter implements Ratelimiter {
-  private readonly namespace: DurableObjectNamespace<any>;
+  private readonly namespace: DurableObjectNamespace<RateLimiterDurableObject>;
   private readonly prefix: string;
   private readonly maxRequests: number;
   private readonly window: number;
