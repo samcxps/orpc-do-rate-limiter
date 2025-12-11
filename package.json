@@ -35,7 +35,7 @@
     "@biomejs/biome": "2.3.8",
     "@cloudflare/workers-types": "^4.20251210.0",
     "@types/bun": "latest",
-    "@types/node": "^24.10.2",
+    "@types/node": "^25.0.0",
     "@vitest/coverage-v8": "4.0.15",
     "ultracite": "6.3.10",
     "unbuild": "^3.6.1",
