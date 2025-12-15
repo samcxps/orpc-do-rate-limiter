@@ -45,6 +45,6 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@orpc/experimental-ratelimit": "^1.12.2"
+    "@orpc/experimental-ratelimit": "^1.12.3"
   }
 }
