@@ -32,7 +32,7 @@
     "dist"
   ],
   "devDependencies": {
-    "@biomejs/biome": "2.3.8",
+    "@biomejs/biome": "2.3.9",
     "@cloudflare/workers-types": "^4.20251210.0",
     "@types/bun": "latest",
     "@types/node": "^24.10.2",
